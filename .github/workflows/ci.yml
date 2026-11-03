@@ -23,7 +23,7 @@ jobs:
           args: -xelatex
           extra_system_packages: fonts-dejavu-core
       - name: Upload PDF file
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: RE4B-EN
           path: |
