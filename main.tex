@@ -11,7 +11,18 @@
 %\setmainfont[Ligatures=TeX]{PT Sans}
 %\setmainfont{DroidSans}
 \setmainfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\IfFileExists{/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf}{
+  \setmonofont[
+    Path=/usr/share/fonts/truetype/dejavu/,
+    Extension=.ttf,
+    UprightFont=DejaVuSansMono,
+    BoldFont=DejaVuSansMono-Bold,
+    ItalicFont=DejaVuSansMono-Oblique,
+    BoldItalicFont=DejaVuSansMono-BoldOblique
+  ]{DejaVu Sans Mono}
+}{
+  \setmonofont{DejaVu Sans Mono}
+}
 \usepackage{polyglossia}
 \usepackage{ucharclasses}
 \usepackage{csquotes}
